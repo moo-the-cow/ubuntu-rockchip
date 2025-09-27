@@ -87,20 +87,12 @@ jobs:
       - name: Install dependencies
         shell: bash
         run: |
-          # Remove potential lock files from previous failed runs
-          #sudo rm -f /var/lib/dpkg/lock-frontend
-          #sudo rm -f /var/lib/apt/lists/lock
-          #sudo rm -f /var/cache/apt/archives/lock
-          # Configure any partially installed packages
-          #sudo dpkg --configure -a
-          
-          #sudo apt-get update && apt-get purge needrestart -y && sudo apt-get upgrade -y
           sudo apt-get install -y build-essential gcc-aarch64-linux-gnu bison \
-          qemu-user-static qemu-system-arm qemu-efi u-boot-tools binfmt-support \
+          qemu-user-static qemu-system-arm qemu-efi-aarch64 u-boot-tools binfmt-support \  # Fixed qemu-efi
           debootstrap flex libssl-dev bc rsync kmod cpio xz-utils fakeroot parted \
-          udev dosfstools uuid-runtime git-lfs device-tree-compiler python2 python3 \
-          python-is-python3 fdisk bc debhelper python3-pyelftools python3-setuptools \
-          python3-distutils python3-pkg-resources swig libfdt-dev libpython3-dev
+          udev dosfstools uuid-runtime git-lfs device-tree-compiler python3 \  # Removed python2
+          python-is-python3 fdisk bc debhelper python3-pyelftools python3-setuptools \  # Removed python3-distutils
+          python3-pkg-resources swig libfdt-dev libpython3-dev
 
       - name: Build
         shell: bash

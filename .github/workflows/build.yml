@@ -63,8 +63,8 @@ jobs:
     strategy:
         matrix:
           suite:
-            - jammy
-            - noble
+            #- jammy
+            #- noble
             - noble_fibocom
     steps:
       - name: Get more disk space

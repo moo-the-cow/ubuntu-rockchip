@@ -67,15 +67,15 @@ jobs:
             #- noble
             - noble_fibocom
     steps:
-      - name: Get more disk space
-        uses: jlumbroso/free-disk-space@main
-        with:
-          tool-cache: false
-          android: true
-          dotnet: true
-          haskell: true
-          large-packages: true
-          swap-storage: true
+      #- name: Get more disk space
+      #  uses: jlumbroso/free-disk-space@main
+      #  with:
+      #    tool-cache: false
+      #    android: true
+      #    dotnet: true
+      #    haskell: true
+      #    large-packages: true
+      #    swap-storage: true
 
       - name: Checkout code
         uses: actions/checkout@v4

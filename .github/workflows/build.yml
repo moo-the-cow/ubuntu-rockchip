@@ -65,6 +65,7 @@ jobs:
           suite:
             - jammy
             - noble
+            - noble_fibocom
     steps:
       - name: Get more disk space
         uses: jlumbroso/free-disk-space@main

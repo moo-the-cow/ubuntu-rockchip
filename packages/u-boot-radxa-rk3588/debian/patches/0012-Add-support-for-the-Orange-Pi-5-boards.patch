@@ -33,6 +33,7 @@ Subject: [PATCH] Add support for the Orange Pi 5 boards
  create mode 100644 configs/orangepi-5-sata-rk3588s_defconfig
  create mode 100644 configs/orangepi-5b-rk3588s_defconfig
  create mode 100644 configs/orangepi-cm5-rk3588s_defconfig
+ create mode 100644 configs/orangepi-5-ultra-rk3588_defconfig
 
 diff --git a/arch/arm/dts/rk3588-orangepi-5-ultra.dts b/arch/arm/dts/rk3588-orangepi-5-ultra.dts
 new file mode 100644
